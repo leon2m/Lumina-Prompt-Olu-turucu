@@ -38,7 +38,7 @@ export const PresetBar: React.FC<PresetBarProps> = ({ presets, onSave, onLoad, o
         
         {/* Create New Button */}
         {isCreating ? (
-            <div className="flex items-center gap-1 bg-white p-1 pr-2 rounded-full border border-indigo-200 shadow-lg min-w-[220px] animate-in slide-in-from-left-5 duration-200">
+            <div className="flex items-center gap-1 bg-white p-1 pr-2 rounded-full border border-indigo-200 shadow-lg min-w-[220px] animate-slide-in">
                 <input 
                     type="text" 
                     value={newName}
@@ -83,7 +83,7 @@ export const PresetBar: React.FC<PresetBarProps> = ({ presets, onSave, onLoad, o
         {presets.map((preset) => (
             <div 
                 key={preset.id} 
-                className="group relative w-48 h-20 bg-white border border-gray-200 hover:border-indigo-300 hover:shadow-md rounded-xl p-3 cursor-pointer transition-all flex-shrink-0 flex flex-col justify-center"
+                className="group relative w-48 h-20 bg-white border border-gray-200 hover:border-indigo-300 hover:shadow-md rounded-xl p-3 cursor-pointer transition-all flex-shrink-0 flex flex-col justify-center animate-slide-in"
                 onClick={() => onLoad(preset)}
             >
                 <div className="flex justify-between items-start w-full">
