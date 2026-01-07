@@ -1,9 +1,9 @@
-import { GoogleGenAI, Type } from "@google/genai";
+import { GoogleGenAI, Type, Schema } from "@google/genai";
 import { PromptSelections, GeneratedPrompt } from "../types";
 
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
-const responseSchema = {
+const responseSchema: Schema = {
   type: Type.OBJECT,
   properties: {
     title: { type: Type.STRING, description: "Cinematic title for the video clip (English)" },
